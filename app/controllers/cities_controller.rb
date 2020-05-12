@@ -32,6 +32,10 @@ class CitiesController < ApplicationController
 
     private
 
+# strong parameters are used to restrict incoming data to only those specified - all other parameters will be summarily dismissed. they also provide additional security by requiring a top-level key
+  
+# strong params syntax: params.require(#{model_name}).permit(#{list each attribute for the model})
+
     def city_params
         params.require(:city).permit(:name, :population, :state)
     end
