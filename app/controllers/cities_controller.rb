@@ -20,7 +20,7 @@ class CitiesController < ApplicationController
     end
 
     def update
-        # @city = City.find(params[:id])
+        # @city = City.find(params[:id]) defined in a private method to avoid repeating code. 
         @city.update(city_params)
         render json: @city
     end
